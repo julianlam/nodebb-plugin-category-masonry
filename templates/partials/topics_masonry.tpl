@@ -1,4 +1,4 @@
-<div component="category" class="row" data-masonry='{"percentPosition": true }'>
+<div class="row" data-masonry='{"percentPosition": true }'>
 	{{{ each topics }}}
 	<div class="col-sm-6 col-lg-4 mb-4">
 		<div class="card">
