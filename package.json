@@ -1,0 +1,44 @@
+{
+  "name": "nodebb-plugin-category-masonry",
+  "version": "1.0.0",
+  "description": "Masonry-style Category View",
+  "main": "library.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/julianlam/nodebb-plugin-category-masonry"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "category-masonry"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/julianlam/nodebb-plugin-category-masonry/issues"
+  },
+  "readmeFilename": "README.md",
+  "nbbpm": {
+    "compatibility": "^3.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "19.6.1",
+    "@commitlint/config-angular": "19.6.0",
+    "eslint": "8.x",
+    "eslint-config-nodebb": "0.2.1",
+    "eslint-plugin-import": "2.x",
+    "husky": "9.1.7",
+    "lint-staged": "15.2.11"
+  }
+}

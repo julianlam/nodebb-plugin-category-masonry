@@ -1,0 +1,18 @@
+{
+	"id": "nodebb-plugin-category-masonry",
+	"url": "https://github.com/NodeBB/nodebb-plugin-category-masonry",
+	"library": "./library.js",
+	"hooks": [
+		{ "hook": "static:app.load", "method": "init" },
+		{ "hook": "static:api.routes", "method": "addRoutes" },
+		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
+		{ "hook": "filter:category.build", "method": "overrideTemplate" }
+	],
+	"scripts": [
+		"public/lib/masonry.pkgd.js"
+	],
+	"modules": {
+		"../admin/plugins/category-masonry.js": "./public/lib/admin.js"
+	},
+	"templates": "templates"
+}
