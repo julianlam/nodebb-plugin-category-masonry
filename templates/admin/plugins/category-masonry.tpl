@@ -12,7 +12,7 @@
 					</p>
 					<div class="mb-3">
 						<label class="form-label" for="thumbPercentage">Thumbnail Percentage</label>
-						<input type="range" max="100" min="0" id="thumbPercentage" name="thumbPercentage" title="Thumbnail Percentage" class="form-range" placeholder="(default: 0)" />
+						<input type="range" max="100" min="0" value="0" id="thumbPercentage" name="thumbPercentage" title="Thumbnail Percentage" class="form-range" placeholder="(default: 0)" />
 						<p class="form-text">
 							(default: 0) If the percentage of topics on that given page exceeds a certain percentage (e.g. 80%),
 							then the layout will switch to Masonry-style automatically. Set to 0 to disable.
