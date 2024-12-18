@@ -14,9 +14,21 @@
 				{{{ if ./teaser.content }}}
 				<p class="card-text">{./teaser.content}</p>
 				{{{ end }}}
-				<p class="card-text">
+				<div class="card-text d-flex align-items-center justify-content-between">
 					<small class="text-body-secondary timeago" title="{./timestampISO}">&nbsp;</small>
-				</p>
+					<div>
+						<i class="fa fa-fw text-xs text-secondary opacity-75 fa-thumbs-up"></i>
+						<small class="text-secondary" title="{./votes}">{humanReadableNumber(./votes, 0)}</small>
+					</div>
+					<div>
+						<i class="fa fa-fw text-xs text-secondary opacity-75 fa-message"></i>
+						<small class="text-secondary" title="{./postcount}">{humanReadableNumber(./postcount, 0)}</small>
+					</div>
+					<div>
+						<i class="fa fa-fw text-xs text-secondary opacity-75 fa-eye"></i>
+						<small class="text-secondary" title="{./viewcount}">{humanReadableNumber(./viewcount, 0)}</small>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
