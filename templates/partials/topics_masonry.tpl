@@ -1,4 +1,4 @@
-<div class="row" data-masonry='{"percentPosition": true }'>
+<div component="category-masonry" class="row">
 	{{{ each topics }}}
 	<div class="col-sm-6 col-lg-4 mb-4">
 		<div class="card">
@@ -14,6 +14,9 @@
 				{{{ if ./teaser.content }}}
 				<p class="card-text">{./teaser.content}</p>
 				{{{ end }}}
+				<p class="card-text">
+					<small class="text-body-secondary timeago" title="{./timestampISO}">&nbsp;</small>
+				</p>
 			</div>
 		</div>
 	</div>
