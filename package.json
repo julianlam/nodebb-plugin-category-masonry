@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-category-masonry",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Masonry-style Category View",
   "main": "library.js",
   "repository": {
