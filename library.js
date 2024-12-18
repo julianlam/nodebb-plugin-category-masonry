@@ -32,7 +32,21 @@ plugin.compile = async () => {
 		return [relative, p];
 	}));
 
-	let text = await fs.readFile(path.join(nconf.get('theme_templates_path'), 'category.tpl'), { encoding: 'utf-8' });
+	let base = 'nodebb-theme-harmony';
+	const fallback = path.join(nconf.get('themes_path'), base, 'templates');
+	let text = await fs.readFile(path.join(fallback, 'category.tpl'), { encoding: 'utf-8' });
+	try {
+		const config = await fs.readFile(nconf.get('theme_config'), { encoding: 'utf-8' });
+		const { id, baseTheme } = JSON.parse(config);
+		if (baseTheme) {
+			base = baseTheme;
+		}
+
+		text = await fs.readFile(path.join(nconf.get('theme_templates_path').replace(id, baseTheme), 'category.tpl'), { encoding: 'utf-8' });
+		text = await fs.readFile(path.join(nconf.get('theme_templates_path'), 'category.tpl'), { encoding: 'utf-8' });
+	} catch {
+		// no handling req'd
+	}
 	text = text.replace('partials/topics_list.tpl', 'partials/topics_masonry.tpl');
 	const template = {
 		path: 'category-masonry.tpl',
