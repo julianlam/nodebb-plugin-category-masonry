@@ -9,7 +9,6 @@
 		{ "hook": "filter:category.build", "method": "overrideTemplate" }
 	],
 	"scripts": [
-		"public/lib/masonry.pkgd.js",
 		"public/lib/client.js"
 	],
 	"modules": {

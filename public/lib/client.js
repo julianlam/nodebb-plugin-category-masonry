@@ -2,10 +2,14 @@
 
 $(document).ready(function () {
 	$(window).on('action:ajaxify.end', function(ev, { tpl_url }) {
-		console.log('what', tpl_url, ajaxify.data.templateToRender);
 		if (ajaxify.data.templateToRender === 'category-masonry') {
-			$('[component="category-masonry"]').masonry({
-				percentPosition: true,
+			require(['masonry-layout', 'imagesloaded'], (Masonry, imagesloaded) => {
+				const grid = document.querySelector('[component="category-masonry"]');
+				imagesloaded(grid, { background: true }, () => {
+					new Masonry(grid, {
+						percentPosition: true,
+					})
+				})
 			})
 		}
 	});

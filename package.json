@@ -40,5 +40,9 @@
     "eslint-plugin-import": "2.x",
     "husky": "9.1.7",
     "lint-staged": "15.2.11"
+  },
+  "dependencies": {
+    "imagesloaded": "^5.0.0",
+    "masonry-layout": "^4.2.2"
   }
 }
